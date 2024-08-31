@@ -1,6 +1,6 @@
 ## About Loan Application
 
-This application is created for interview purpose. This hold landing page and loan application form on front end with login/register/forgot password options. I have used laravel breeze for AUTH UI and Backend Template.
+This application is created for interview purpose. This hold landing page and loan application form on front end with login/register/forgot password options. I have used laravel breeze for AUTH UI and Tailwind CSS Front/Backend Template.
 
 ## Frontend URLS
 - `/` - Landing Page
