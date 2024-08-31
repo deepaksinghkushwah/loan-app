@@ -16,7 +16,7 @@ class ApplicationController extends Controller
     public function store(LoanApplicationRequest $request)
     {
         $request->validated();
-        LoanApplication::create($request->all());
+        LoanApplication::create($request->except('status'));
         notify()->success('Your application is submitted, our team will contact you soon');
         return redirect()->route('loan.application.form');
     }

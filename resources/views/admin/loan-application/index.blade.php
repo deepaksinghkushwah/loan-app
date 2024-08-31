@@ -12,6 +12,7 @@
           <th>Email</th>
           <th>Cell</th>
           <th>Loan Amount</th>
+          <th>Status</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -24,6 +25,7 @@
             <td>{{ $row->email }}</td>
             <td>{{ $row->cell }}</td>
             <td>{{ $row->loan_amount }}</td>
+            <td>{{ ucwords($row->status) }}</td>
             <td>
 
               <form class="flex gap-2" action="{{ route('admin.loan.destroy', $row->id) }}">
@@ -44,7 +46,9 @@
 @section('footer-js1')
   <script>
     window.onload = () => {
-      let table = new DataTable('#table1');
+      let table = new DataTable('#table1',{
+        order: [[0, 'desc']]
+      });
     }
   </script>
 @endsection

@@ -40,10 +40,22 @@
         <td>Loan Type</td>
         <td>
           <select name="loan_type" id="" class="text-black w-full h-10">
-            <option {{$row->loan_type == 'personal' ? 'selected' : ''}} value="personal"selected>Personal</option>
+            <option {{$row->loan_type == 'personal' ? 'selected' : ''}} value="personal">Personal</option>
             <option {{$row->loan_type == 'home' ? 'selected' : ''}} value="home">Home</option>
           </select>
         </td>
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td>
+        <select name="status" id="" class="text-black w-full h-10">
+            <option {{$row->status == 'applied' ? 'selected' : ''}} value="applied">Applied</option>
+            <option {{$row->loan_type == 'passed' ? 'selected' : ''}} value="passed">Passed</option>
+            <option {{$row->loan_type == 'rejected' ? 'selected' : ''}} value="rejected">Rejected</option>
+          </select>
+        </td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td colspan="4" class="text-right">
