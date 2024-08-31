@@ -23,7 +23,7 @@ class LoanApplicationController extends Controller
      */
     public function create()
     {
-        return view('admin.loan.create');
+        return view('admin.loan-application.create');
     }
 
     /**
@@ -34,7 +34,7 @@ class LoanApplicationController extends Controller
         $request->validated();
         LoanApplication::create($request->all());
         notify()->success('Your application is submitted, our team will contact you soon');
-        return redirect()->route('loan.application.form');
+        return redirect()->route('admin.loan.index');
     }
 
     /**
@@ -68,8 +68,10 @@ class LoanApplicationController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(LoanApplication $loan)
     {
-        //
+        $loan->delete();
+        notify()->success('Your application is deleted successfully');
+        return redirect()->route('admin.loan.index');
     }
 }

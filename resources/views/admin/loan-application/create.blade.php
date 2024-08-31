@@ -1,4 +1,5 @@
-<x-guest-layout>
+@extends("admin.layouts.main")
+@section('content')
   <form action="{{ route('admin.loan.store') }}" method="post">
     @csrf
     <h1 class="text-5xl font-bold text-center pb-10 ">Application for Loan</h1>
@@ -51,4 +52,4 @@
       </tr>
     </table>
   </form>
-</x-guest-layout>
+@endsection

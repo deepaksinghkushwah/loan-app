@@ -11,7 +11,8 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
-    <link rel="stylesheet" href="//cdn.datatables.net/2.1.5/css/dataTables.dataTables.min.css">
+    <link href="https://cdn.datatables.net/v/dt/dt-2.1.5/b-3.1.2/b-html5-3.1.2/datatables.min.css" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <style>
     div.dt-container .dt-search input {
@@ -69,7 +70,9 @@
         Copyright&copy; {{ date('Y') }}
       </div>
     </footer>
-    <script src="//cdn.datatables.net/2.1.5/js/dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/v/dt/dt-2.1.5/b-3.1.2/b-html5-3.1.2/datatables.min.js"></script>
     @notifyJs
     @yield('footer-js1')
     @yield('footer-js2')

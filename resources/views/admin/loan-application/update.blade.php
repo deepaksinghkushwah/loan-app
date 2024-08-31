@@ -1,4 +1,5 @@
-<x-guest-layout>
+@extends("admin.layouts.main")
+@section('content')
   <form action="{{ route('admin.loan.update', $row->id) }}" method="post">
     @csrf
     @method("PATCH")
@@ -64,4 +65,4 @@
       </tr>
     </table>
   </form>
-</x-guest-layout>
+@endsection
